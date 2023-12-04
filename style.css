@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--Light-pink);
+}
+
+main {
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  position: relative;
+  background-size: 375px;
+  width: 375px;
+  height: 232px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 50px auto;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.logo-faq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.star-logo {
+  background-image: url(./assets/images/icon-star.svg);
+  width: 8%;
+  background-size: contain;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: calc(35% * 1 / 4);
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--Dark-purple);
+  margin-left: 20px;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.question p {
+  color: var(--Dark-purple);
+  font-weight: 600;
+  width: 85%;
+}
+
+.plus-logo {
+  background-image: url(./assets/images/icon-plus.svg);
+  width: 30px;
+  height: 31px;
+  cursor: pointer;
+}
+
+.minus-logo {
+  background-image: url(./assets/images/icon-minus.svg);
+  width: 30px;
+  height: 31px;
+  cursor: pointer;
+}
+
+.answer {
+  color: var(--Grayish-purple);
+  display: none;
+}
+
+hr {
+  border-color: var(--Light-pink);
+  margin-top: 20px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-size: 700px;
+    width: 700px;
+    height: 250px;
+  }
+
+  .container {
+    width: 45%;
+    top: 45%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    background-size: 900px;
+    width: 900px;
+    height: 280px;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  main {
+    background-size: 1100px;
+    width: 1100px;
+    height: 300px;
+  }
+
+  .container {
+    width: 40%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  main {
+    background-size: 1440px;
+    width: 1440px;
+    height: 320px;
+  }
+
+  .container {
+    width: 35%;
+  }
+}
